@@ -3,50 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bombparty Solo</title>
+  <title>Bombparty Multiplayer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrapper">
-    <header class="top">
-      <h1>Bombparty Solo</h1>
-      <div class="stats">
-        <div><span class="label">Round:</span> <span id="round">1</span></div>
-        <div><span class="label">Pontos:</span> <span id="score">0</span></div>
-        <div><span class="label">Vidas:</span> <span id="lives">3</span></div>
+    <h1>Bombparty Multiplayer</h1>
+    <div class="stats">
+      <p id="round">Round: 1</p>
+      <p id="turn">Vez: Jogador 1</p>
+    </div>
+
+    <div class="prompt">
+      <h2 id="syllable">---</h2>
+      <div class="timer">
+        <div id="timebar"></div>
+        <span id="timeleft">10s</span>
       </div>
-    </header>
+    </div>
 
-    <main class="game">
-      <div class="prompt">
-        <div class="bomb">
-          <div class="fuse"></div>
-        </div>
-        <div class="syllable" id="syllable">---</div>
-        <div class="timer">
-          <div class="bar" id="timebar"></div>
-          <span id="timeleft">10s</span>
-        </div>
-      </div>
+    <div class="input-area">
+      <input id="word" type="text" placeholder="Digite uma palavra" />
+      <button id="submit">Enviar</button>
+    </div>
 
-      <div class="input-area">
-        <input id="word" type="text" placeholder="Digite uma palavra que contenha a sílaba" autocomplete="off" />
-        <button id="submit">Enviar</button>
-      </div>
+    <div id="feedback"></div>
 
-      <p class="hint">A palavra precisa conter a sílaba mostrada. Ex.: sílaba “ra” → “rato”, “cobra”, “barato”.</p>
-
-      <div class="feedback" id="feedback"></div>
-
-      <div class="controls">
-        <button id="start">Começar</button>
-        <button id="restart" class="ghost">Reiniciar</button>
-      </div>
-    </main>
-
-    <footer class="foot">
-      <p>Modo solo. Quer multiplayer local? Posso adicionar turnos e ranking.</p>
-    </footer>
+    <button id="start">Começar</button>
+    <button id="restart">Reiniciar</button>
   </div>
 
   <script src="script.js"></script>
