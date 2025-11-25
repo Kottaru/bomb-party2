@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bombparty Solo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="top">
+      <h1>Bombparty Solo</h1>
+      <div class="stats">
+        <div><span class="label">Round:</span> <span id="round">1</span></div>
+        <div><span class="label">Pontos:</span> <span id="score">0</span></div>
+        <div><span class="label">Vidas:</span> <span id="lives">3</span></div>
+      </div>
+    </header>
+
+    <main class="game">
+      <div class="prompt">
+        <div class="bomb">
+          <div class="fuse"></div>
+        </div>
+        <div class="syllable" id="syllable">---</div>
+        <div class="timer">
+          <div class="bar" id="timebar"></div>
+          <span id="timeleft">10s</span>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <input id="word" type="text" placeholder="Digite uma palavra que contenha a sílaba" autocomplete="off" />
+        <button id="submit">Enviar</button>
+      </div>
+
+      <p class="hint">A palavra precisa conter a sílaba mostrada. Ex.: sílaba “ra” → “rato”, “cobra”, “barato”.</p>
+
+      <div class="feedback" id="feedback"></div>
+
+      <div class="controls">
+        <button id="start">Começar</button>
+        <button id="restart" class="ghost">Reiniciar</button>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <p>Modo solo. Quer multiplayer local? Posso adicionar turnos e ranking.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
